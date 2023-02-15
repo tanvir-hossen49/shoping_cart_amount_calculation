@@ -15,14 +15,19 @@
       rel="stylesheet"
     />
     <link href="style.css" rel="stylesheet" />
+
+    <script defer src="app.js"></script>
   </head>
 
   <body>
     <section>
       <div class="container">
-        <h2>My shopping cart</h2>
+        <div class="d-flex justify-content-between pt-5">
+          <h2>My shopping cart</h2>
+          <button type="button" class="btn btn-warning btn-undo">Undo</button>
+        </div>
         <div class="cart">
-          <div class="col-md-12 col-lg-10 mx-auto">
+          <div class="col-md-12 col-lg-10 mx-auto cart-container">
             <div class="cart-item">
               <div class="row">
                 <div class="col-md-7 center-item">
@@ -38,14 +43,14 @@
                     <input
                       type="number"
                       min="0"
-                      class="form-control text-center"
+                      class="form-control text-center input-field"
                       value="1"
                     />
                     <button class="btn btn-default plus-btn">
                       <i class="fas fa-plus"></i>
                     </button>
                   </div>
-                  <h5>$ <span data-value="1219">1219</span></h5>
+                  <h5>$<span data-value="1219">1219</span></h5>
                   <img src="images/remove.png" alt="" class="remove-item" />
                 </div>
               </div>
@@ -65,14 +70,14 @@
                     <input
                       type="number"
                       min="0"
-                      class="form-control text-center"
+                      class="form-control text-center input-field"
                       value="1"
                     />
                     <button class="btn btn-default plus-btn">
                       <i class="fas fa-plus"></i>
                     </button>
                   </div>
-                  <h5>$ <span data-value="59">59</span></h5>
+                  <h5>$<span data-value="59">59</span></h5>
                   <img src="images/remove.png" alt="" class="remove-item" />
                 </div>
               </div>
@@ -91,14 +96,14 @@
                     <input
                       type="number"
                       min="0"
-                      class="form-control text-center"
+                      class="form-control text-center input-field"
                       value="1"
                     />
                     <button class="btn btn-default plus-btn">
                       <i class="fas fa-plus"></i>
                     </button>
                   </div>
-                  <h5>$ <span data-value="300">300</span></h5>
+                  <h5>$<span data-value="300">300</span></h5>
                   <img src="images/remove.png" alt="" class="remove-item" />
                 </div>
               </div>
@@ -117,14 +122,14 @@
                     <input
                       type="number"
                       min="0"
-                      class="form-control text-center"
+                      class="form-control text-center input-field"
                       value="1"
                     />
                     <button class="btn btn-default plus-btn">
                       <i class="fas fa-plus"></i>
                     </button>
                   </div>
-                  <h5>$ <span data-value="210">210</span></h5>
+                  <h5>$<span data-value="210">210</span></h5>
                   <img src="images/remove.png" alt="" class="remove-item" />
                 </div>
               </div>
@@ -134,14 +139,14 @@
               <div class="row">
                 <div class="col-md-8">
                   <h5>Subtotal:</h5>
-                  <h5>Tax:</h5>
+                  <h5>Tax 10%:</h5>
                   <h5>Total:</h5>
                 </div>
 
                 <div class="col-md-4 status">
-                  <h5>$ <span id="total-value">1788</span></h5>
-                  <h5>$0</h5>
-                  <h5>$1,278</h5>
+                  <h5>$<span id="subtotal-value"></span></h5>
+                  <h5>$<span id="tax"></span></h5>
+                  <h5>$<span id="total-value"></span></h5>
                 </div>
               </div>
             </div>
@@ -154,7 +159,5 @@
         </div>
       </div>
     </section>
-
-    <script src="app.js"></script>
   </body>
 </html>
